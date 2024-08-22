@@ -1,0 +1,69 @@
+html {
+    --main-color: #4855CD;
+    --hover-color: #2f3a9a;
+}
+
+h1 {
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: 900;
+    color: var(--main-color);
+    font-size: 60px;
+    margin: 20px;
+}
+
+h1 i {
+    font-size: 40px;
+}
+
+#bottomDiv {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 12vh;
+}
+
+#bottomDiv #userDiv, #bottomDiv #settingsDiv {
+    background-color: var(--main-color);
+    width: 50%;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+#bottomDiv #userDiv:hover, #bottomDiv #settingsDiv:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+#addButton {
+    position: fixed;
+    right: 20px;
+    bottom: 15vh;
+    font-size: 60px;
+    color: var(--main-color);
+    transition: 0.5s;
+}
+
+#addButton:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+#zeroNotes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--hover-color);
+}
+
+#zeroNotes img {
+    width: 50%;
+}
