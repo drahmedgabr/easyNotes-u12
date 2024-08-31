@@ -67,3 +67,11 @@ h1 i {
 #zeroNotes img {
     width: 50%;
 }
+
+#noteInput {
+    width: 100%;
+    resize: none;
+    outline-color: var(--main-color);
+    font-size: 25px;
+    padding: 10px;
+}
