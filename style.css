@@ -3,6 +3,11 @@ html {
     --hover-color: #2f3a9a;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 h1 {
     font-family: "Sankofa Display", sans-serif;
     font-weight: 900;
@@ -62,6 +67,7 @@ h1 i {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--hover-color);
+    display: none;
 }
 
 #zeroNotes img {
@@ -74,4 +80,17 @@ h1 i {
     outline-color: var(--main-color);
     font-size: 25px;
     padding: 10px;
+}
+
+#notesDiv div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #DDDFF5;
+    font-size: 25px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+#notesDiv div p {
+    margin: 0;
 }
