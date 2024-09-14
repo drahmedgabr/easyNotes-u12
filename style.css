@@ -67,7 +67,6 @@ h1 i {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--hover-color);
-    display: none;
 }
 
 #zeroNotes img {
