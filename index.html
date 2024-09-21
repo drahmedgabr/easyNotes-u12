@@ -21,11 +21,11 @@
         <i class="bi bi-journal-bookmark-fill"></i>
     </h1>
     <div id="bottomDiv">
-        <div id="userDiv">
-            <i class="bi bi-person-fill"></i>
+        <div id="userDiv" onclick="showHome()">
+            <i class="bi bi-house-door-fill"></i>
         </div>
-        <div id="settingsDiv">
-            <i class="bi bi-gear-fill"></i>
+        <div id="settingsDiv" onclick="showOptions()">
+            <i class="bi bi-person-fill"></i>
         </div>
     </div>
     <div id="addButton" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -64,6 +64,38 @@
   <div id="notesDiv">
 
   </div>
+
+  <!-- Start Options Div -->
+
+  <div id="optionsDiv">
+
+        <div>
+          <h3>Please login to get data</h3>
+          <br><br>
+          <button class="btn btn-lg btn-success" onclick="showLogin()">Login</button>
+          <br><br>
+          <button class="btn btn-lg btn-primary">Signup</button>
+        </div>
+
+  </div>
+
+  <!-- End Options Div -->
+
+  <!-- Start Login Div  -->
+
+  <div id="loginDiv">
+
+    <div>
+      <input type="email" placeholder="enter your email">
+      <br><br>
+      <input type="password" placeholder="enter your password">
+      <br><br>
+      <button class="btn btn-lg btn-primary">Login</button>
+    </div>
+      
+  </div>
+
+  <!-- End Login Div -->
   
 </body>
 </html>

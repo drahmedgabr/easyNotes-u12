@@ -93,3 +93,40 @@ h1 i {
 #notesDiv div p {
     margin: 0;
 }
+
+#optionsDiv {
+    height: 77vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#optionsDiv div {
+    text-align: center;
+}
+
+#optionsDiv div button {
+    width: 80%;
+}
+
+#loginDiv {
+    height: 77vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginDiv div {
+    text-align: center;
+}
+
+#loginDiv div button {
+    width: 80%;
+}
+
+#loginDiv div input {
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
