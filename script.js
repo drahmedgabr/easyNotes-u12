@@ -3,13 +3,29 @@ const notesDiv = document.getElementById("notesDiv");
 const zeroNotes = document.getElementById("zeroNotes");
 const loginDiv = document.getElementById("loginDiv");
 const optionsDiv = document.getElementById("optionsDiv");
+const loginEmail = document.getElementById("loginEmail");
+const loginPassword = document.getElementById("loginPassword");
+const loginError = document.getElementById("loginError");
+const detailsDiv = document.getElementById("detailsDiv");
+const greetingText = document.getElementById("greetingText");
+
 
 
 
 var notesArray = [];
 
 function showOptions() {
-    optionsDiv.style.display = "flex";
+
+    const userId = localStorage.getItem("userid");
+
+    if(userId == null){
+        optionsDiv.style.display = "flex";
+    } else {
+        const userName = localStorage.getItem("username");
+        greetingText.innerText = `Welcome ${userName}`;
+        detailsDiv.style.display = "flex";
+    }
+
     notesDiv.style.display = "none";
     zeroNotes.style.display = "none";
 }
@@ -17,6 +33,7 @@ function showOptions() {
 function showHome() {
     optionsDiv.style.display = "none";
     loginDiv.style.display = "none";
+    detailsDiv.style.display = "none";
     notesDiv.style.display = "block";
     getNotes();
 }
@@ -94,3 +111,40 @@ function showNotes() {
 }
 
 getNotes();
+
+async function loginUser() {
+
+    loginError.style.display = "none";
+
+    const apiUrl = `https://tatbeqak.site/apps/tatbeqey/apps/easynotes/login?email=${loginEmail.value}&password=${loginPassword.value}`;
+
+    const response = await fetch(apiUrl);
+
+    const data = await response.json();
+
+    const status = data.status;
+
+    if (status == true) {
+
+        const userName = data.name;
+        const userId = data.id;
+
+        localStorage.setItem("username", userName);
+        localStorage.setItem("userid", userId);
+
+        greetingText.innerText = `Welcome ${userName}`;
+
+        loginDiv.style.display = "none";
+        detailsDiv.style.display = "flex";
+        
+    } else {
+        loginError.style.display = "block";
+    }
+    
+}
+
+function logoutUser() {
+    localStorage.removeItem("userid");
+    localStorage.removeItem("username");
+    showHome();
+}
