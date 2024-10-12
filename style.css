@@ -160,3 +160,57 @@ h1 i {
     border: 2px solid darkblue;
     border-radius: 20px;
 }
+
+#adsDiv {
+    position: absolute;
+    top: 15vh;
+    left: 20px;
+    display: none;
+}
+
+#adsDiv div {
+    width: 200px;
+    height: 300px;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 1200px) {
+
+    #notesDiv {
+        width: 600px;
+        margin: auto;
+    }
+
+    #notesDiv div {
+        margin-bottom: 20px;
+        border: 2px solid var(--main-color);
+        border-radius: 20px;
+    }
+    
+    #bottomDiv {
+        right: 0;
+        left: auto;
+        top: 50%;
+        transform: translate(0, -50%);
+        flex-direction: column;
+        width: 100px;
+        height: 20vh;
+    }
+
+    #bottomDiv #userDiv, #bottomDiv #settingsDiv {
+        width: 100%;
+        height: 50%;
+    }
+
+    #adsDiv {
+        display: block;
+    }
+
+}
